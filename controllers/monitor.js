@@ -61,7 +61,7 @@ let blockParser = (blockno) => {
                                     else
                                         console.log('Error sending email')
                                 } else {
-                                    let receipt = await web3.eth.getTransactionReceipt();
+                                    //let receipt = await web3.eth.getTransactionReceipt();
                                 }
                             }
                         }).catch(err => {

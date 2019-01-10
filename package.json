@@ -19,6 +19,7 @@
   "dependencies": {
     "async": "^2.6.1",
     "dotenv": "^6.2.0",
+    "email-validator": "^2.0.4",
     "express": "^4.16.4",
     "leveldown": "^4.0.1",
     "levelup": "^4.0.0",

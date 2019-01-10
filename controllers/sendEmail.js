@@ -1,3 +1,4 @@
+require('dotenv').config();
 const nodemailer = require('nodemailer');
 
 let sendEmail = (to, subject, content) => {
@@ -5,18 +6,18 @@ let sendEmail = (to, subject, content) => {
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'swiggyorderkarunga@gmail.com', // generated ethereal user
-            pass: 'mohit@1996'
+            user: process.env.EMAIL,
+            pass: process.env.PASS
         }
     });
 
     // setup email data with unicode symbols
     let mailOptions = {
-        from: 'swiggyorderkarunga@gmail.com', // sender address
-        to: [to], // list of receivers
+        from: process.env.EMAIL,
+        to: [to],
         subject: subject,
-        text: subject, // plain text body
-        html: `<b>${content}</b>` // html body
+        text: subject,
+        html: `<b>${content}</b>`
     };
 
     // send mail with defined transport object
